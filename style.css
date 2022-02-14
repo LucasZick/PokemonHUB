@@ -3,17 +3,12 @@
     padding:0;
 }
 
-.fundo{
-    background-color: #FFCB05;
-    height: 100vh;
-}
-
 .search{
     position: absolute;
     top: 20%;
     left: 50%;
     transform: translate(-50%,-0%);
-    background-color:white;
+    background-color:#306CB4;
     border: solid 1px;
     border-radius: 15px;
     width: 800px;
@@ -23,17 +18,31 @@
 	box-shadow:         1px 3px 2px rgba(50, 50, 50, 0.77);
 }
 
-.pokemons{
+.pokemon_carta{
     position: static;
     width: 153px;
     height: 207px;
-    background-color: #FFCB05;
+    background-color: #306CB4;
     float: left;
-    margin: 1%;
+    margin: 10px;
     border-radius: 30px;
     -webkit-box-shadow: 2px 7px 5px rgba(50, 50, 50, 0.77);
 	-moz-box-shadow:    2px 7px 5px rgba(50, 50, 50, 0.77);
 	box-shadow:         2px 7px 5px rgba(50, 50, 50, 0.77);
+}
+
+.pokemon_atributos{
+    position: absolute;
+    width: 122px;
+    height: 96px;
+    margin: 15px;
+    margin-top: 100px;
+    background-color: #FFCB05;
+    border-radius: 30px;
+}
+
+#fundo{
+    background-color: #FFCB05;
 }
 
 #txtsearch{
@@ -43,6 +52,7 @@
     font-size: 18px;
     border: none;
     height: 30px;
+    color: #FFCB05;
     width: 100%;
     text-align: center;
     border-radius: 15px;
@@ -59,9 +69,9 @@
 }
 
 #pokes{
-    background-color: blue;
+    background-color: transparent;
     width: 100%;
     height: 75%;
     position: absolute;
-    top: 25%
+    top: 25%;
 }
