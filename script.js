@@ -13,22 +13,33 @@ const fetchPokemon = () => {
             name: data.name,
             id: data.id,
             image: data.sprites['front_default'],
+            stats_name: data.stats.map((stat) => stat.stat.name).join('<br><br>'),
+            stats: data.stats.map((stat) => stat.base_stat).join('<br><br>'),
             type: data.types.map((type) => type.type.name).join(', ')
         }));
-    displayPokemon(pokemon);
+        displayPokemon(pokemon);
     });  
 };
 
 const displayPokemon = (pokemon) => {
     console.log(pokemon);
-    const pokemonHTMLString = pokemon.map ( pokeman => `
-    <li class='pokemon_carta'>
-        <img src="${pokeman.image}"/>
-        <div class='pokemon_atributos'>
-            <h2><br>${pokeman.id}. ${pokeman.name.toUpperCase()}</h2>
-            <p><br>${pokeman.type.toUpperCase()}</p>
+    const pokemonHTMLString = pokemon.map ( pokeman => 
+        `
+    <div class='container'>
+        <div class='carta'>
+            <div class='pokemon_carta_frente'>
+                <img src="${pokeman.image}"/>
+                <div class='pokemon_atributos'>
+                    <h2><br>${pokeman.id}. ${pokeman.name.toUpperCase()}</h2>
+                    <p><br>${pokeman.type.toUpperCase()}</p>
+                </div>
+            </div>
+            <div class='pokemon_carta_tras'>
+            <h2 id='stats_name'>${pokeman.stats_name}</h2>
+            <h2 id='stats'>${pokeman.stats}</h2>
+            </div>
         </div>
-    </li>
+    </div>
     `
         )
         .join('');
