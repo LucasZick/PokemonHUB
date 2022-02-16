@@ -1,6 +1,6 @@
 const pokedex = document.getElementById("pokedex");
-console.log(pokedex)
-
+const inputSearch = document.getElementById("txtsearch");
+console.log(inputSearch);
 const fetchPokemon = () => {
     const promises = [];
     for( let i = 1; i < 151; i++){
@@ -46,4 +46,18 @@ const displayPokemon = (pokemon) => {
     pokedex.innerHTML = pokemonHTMLString;
 }
 
-    fetchPokemon();
+inputSearch.addEventListener('input', event => {
+    const inputValue = event.target.value.trim()
+    Array.from(pokedex.children)
+        .filter(todo => !todo.textContent.includes(inputValue.toUpperCase()))
+        .forEach(todo => {
+            todo.classList.add('hidden')
+        })
+    Array.from(pokedex.children)
+        .filter(todo => todo.textContent.includes(inputValue.toUpperCase()))
+        .forEach(todo => {
+            todo.classList.remove('hidden')
+        })    
+})
+
+fetchPokemon();

@@ -11,8 +11,8 @@
     background-color:#306CB4;
     border: solid 5px;
     border-radius: 15px;
-    width: 800px;
-    height: 30px;
+    width: 40%;
+    height: 2.5%;
     -webkit-box-shadow: 1px 3px 2px rgba(50, 50, 50, 0.77);
 	-moz-box-shadow:    1px 2px 2px rgba(50, 50, 50, 0.77);
 	box-shadow:         1px 3px 2px rgba(50, 50, 50, 0.77);
@@ -87,6 +87,10 @@
     pointer-events: none;
 }
 
+.hidden{
+    display: none;
+}
+
 /*---------------------------------------------------------------------*/
 /*---------------------------------------------------------------------*/
 
@@ -95,17 +99,25 @@
 }
 
 #txtsearch{
-    background-color: transparent;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-0%);
+    background-color:#FFCB05;
+    color: #306CB4;
+    border: solid 5px;
+    border-color:#306CB4;
+    border-radius: 15px;
+    width: 40%;
+    height: 2.5%;
+    -webkit-box-shadow: 1px 3px 2px rgba(50, 50, 50, 0.77);
+	-moz-box-shadow:    1px 2px 2px rgba(50, 50, 50, 0.77);
+	box-shadow:         1px 3px 2px rgba(50, 50, 50, 0.77); 
     font-family: verdana;
     font-weight: bold;
     font-style: italic;
     font-size: 18px;
-    border: none;
-    height: 30px;
-    color: #FFCB05;
-    width: 100%;
     text-align: center;
-    border-radius: 15px;
     text-transform: uppercase;
 }
 
@@ -158,6 +170,12 @@
     cursor: pointer;
 }
 
+#txtsearch:hover {
+    width: 41%;
+    height: 3%;
+    font-size: 19px;
+}
+
 .pokemon_atributos:hover{
     border-color:red;
     color: black;
@@ -175,3 +193,8 @@
 .container:active .carta {
     transform: rotateY(0);
 }
+
+.container:active .pokemon_atributos {
+    border-color: red;
+}
+
