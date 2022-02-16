@@ -129,6 +129,8 @@
     top:1%;
     left:50%;
     transform: translate(-50%,-0%);
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
 }
 
 #pokes{
@@ -168,6 +170,11 @@
 
 #logo:hover{
     cursor: pointer;
+    transform: translateX(-50%) rotate(5deg) translateY(0);
+}
+
+#logo:active{
+    transform: translateX(-50%) rotate(-5deg) translateY(0);
 }
 
 #txtsearch:hover {
