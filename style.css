@@ -9,7 +9,7 @@
     left: 50%;
     transform: translate(-50%,-0%);
     background-color:#306CB4;
-    border: solid 1px;
+    border: solid 5px;
     border-radius: 15px;
     width: 800px;
     height: 30px;
@@ -28,6 +28,8 @@
     float: left;
     margin: 12px;
     border-radius: 30px;
+    border: solid 5px;
+    border-color: black;
     -webkit-box-shadow: 2px 7px 5px rgba(50, 50, 50, 0.77);
 	-moz-box-shadow:    2px 7px 5px rgba(50, 50, 50, 0.77);
 	box-shadow:         2px 7px 5px rgba(50, 50, 50, 0.77);
@@ -41,11 +43,15 @@
     width: 167px;
     font-family: verdana;
     font-weight: bold;
-    font-style: italic;
     font-size: 11px;
-    margin:10px;
+    margin: 8px;
     text-align: center;
+    border: solid 2px;
+    border-color: black;
 }
+
+/*---------------------------------------------------------------------*/
+/*---------------------------------------------------------------------*/
 
 #fundo{
     background-color: #FFCB05;
@@ -69,7 +75,7 @@
 
 #logo{
     width: 322px;
-    height: 118px;
+    height: 131px;
     margin-top: 10px;
     position: absolute;
     top:1%;
@@ -79,8 +85,25 @@
 
 #pokes{
     background-color: transparent;
-    width: 100%;
+    margin-left: 2.5%;
+    width: 95%;
     height: 75%;
     position: absolute;
-    top: 25%;
+    top: 30%;
+}
+
+/*---------------------------------------------------------------------*/
+/*---------------------------------------------------------------------*/
+
+#logo:hover{
+    cursor: pointer;
+}
+
+.pokemon_carta:hover{
+    cursor: pointer;
+    border-color:white;
+}
+
+.pokemon_atributos:hover{
+    border-color:red;
 }
