@@ -25,8 +25,8 @@ const displayPokemon = (pokemon) => {
     <li class='pokemon_carta'>
         <img src="${pokeman.image}"/>
         <div class='pokemon_atributos'>
-            <h2>${pokeman.id} : ${pokeman.name.toUpperCase()}</h2>
-            <p>Type: ${pokeman.type}</p>
+            <h2><br>${pokeman.id}. ${pokeman.name.toUpperCase()}</h2>
+            <p><br>${pokeman.type.toUpperCase()}</p>
         </div>
     </li>
     `
