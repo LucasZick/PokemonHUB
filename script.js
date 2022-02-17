@@ -15,7 +15,7 @@ const fetchPokemon = () => {
             image: data.sprites['front_default'],
             stats_name: data.stats.map((stat) => stat.stat.name).join('<br><br>'),
             stats: data.stats.map((stat) => stat.base_stat).join('<br><br>'),
-            type: data.types.map((type) => type.type.name).join(', ')
+            type: data.types.map((type) => type.type.name).join(' - ')
         }));
         displayPokemon(pokemon);
     });  
