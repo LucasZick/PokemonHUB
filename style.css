@@ -250,15 +250,16 @@
 #cont:active #credits{
     background-color: black;
     border-color: white;
+    color:white;
     cursor: pointer;
 }
 
-#lucas:hover {
+#cont:hover #lucas {
     color:black;
     font-size: 40px;
 }
 
-#lucas:active {
+#cont:active #lucas{
     color:white;
 }
 
