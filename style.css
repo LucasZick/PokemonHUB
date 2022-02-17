@@ -119,6 +119,8 @@
     font-size: 18px;
     text-align: center;
     text-transform: uppercase;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
 }
 
 #logo{
@@ -165,6 +167,39 @@
     text-transform: uppercase;
 }
 
+#cont{
+    float:right;
+    margin: 2%;
+    background-color: transparent;
+}
+
+#credits {
+    float:right;
+    margin: 2%;
+    background-color: transparent;
+    border: solid 5px;
+    border-color: #306CB4;
+    border-radius: 25px;
+    transform-style: preserve-3d;
+    transition: all 1s ease;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#lucas {
+    color: #306CB4;
+    margin: 5px;
+    text-align: center;
+    font-weight: bold;
+    transform-style: preserve-3d;
+    transition: all 0.7s ease;
+    font-family:'Courier New', Courier, monospace;
+}
+
 /*---------------------------------------------------------------------*/
 /*---------------------------------------------------------------------*/
 
@@ -203,5 +238,27 @@
 
 .container:active .pokemon_atributos {
     border-color: red;
+}
+
+#cont:hover #credits{
+    background-color: white;
+    border-color:black;
+    cursor: pointer;
+    transform: rotateZ(-20deg) rotateX(360deg);
+}
+
+#cont:active #credits{
+    background-color: black;
+    border-color: white;
+    cursor: pointer;
+}
+
+#lucas:hover {
+    color:black;
+    font-size: 40px;
+}
+
+#lucas:active {
+    color:white;
 }
 
